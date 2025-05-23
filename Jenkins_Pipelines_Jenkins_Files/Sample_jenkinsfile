@@ -39,6 +39,13 @@ pipeline {
             }
         }
 
+        stage('Additional Stage') {
+            steps {
+                // Run your tests (e.g., unit tests, integration tests)
+                sh 'echo "I have made an additional stage."'
+            }
+        }
+
         stage('Deploy') {
             steps {
                 // Deploy your application to a target environment (e.g., staging, production)
